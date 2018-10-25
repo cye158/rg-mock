@@ -1,0 +1,18 @@
+.content1{
+    display: grid;
+    grid-template-rows: repeat(2, minmax( 70px, auto));
+    grid-template-areas:
+        "carousel"
+        "infos";
+    
+    Carousel{
+        grid-area: carousel;
+    }
+
+    Infos{
+        grid-area: infos;
+    }
+}
+
+
+

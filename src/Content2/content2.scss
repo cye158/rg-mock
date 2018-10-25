@@ -1,0 +1,123 @@
+%info-fonts{
+    font-size: 1.167em;
+    line-height: 1.667em;
+    text-align: left;
+};
+
+%stat-nums{
+    font-weight: bold;
+    font-size: 55px;
+    letter-spacing: 2px;
+    margin: 25px 0 0 0;
+}
+
+%stat-texts{
+    font-size: 14px;
+    color: #f36819;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+
+%header-title{
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.667em;
+}
+
+.content2{
+    display: grid;
+    margin: 60px;
+    align-content: center;
+    justify-items: center;
+    grid-template-rows: repeat(3, minmax( 45px, auto));
+    grid-template-columns: repeat(7, minmax( 50px, 1fr));
+    grid-template-areas: 
+        ". . title title title . ."
+        ". info info info btn btn . "
+        ". stat1 . stat2 . stat3 .";
+    
+    .title{
+        grid-area: title;
+        margin: 25px;
+        
+        .title-left{
+            @extend %header-title;
+            font-weight: bold;
+            color: #f36819;
+        }
+
+        .title-right{
+            @extend %header-title;
+            color: #283647;
+        }
+    }
+
+    .info{
+        @extend %info-fonts;
+        font-size: 16px;
+        color: rgb(75, 75, 75);
+        width: 440px;
+        justify-self: flex-start;
+        grid-area: info;
+    }
+
+    .btn{
+        align-self: center;
+        margin: auto;
+        justify-self: flex-start;
+        grid-area: btn;
+        
+        button{
+            color: whitesmoke;
+            font-size: 1.333em;
+            height: 40px;
+            width: 215px;
+            margin: 50px;
+            letter-spacing: 0.167em;
+            border: 0;
+            border-radius: 0.417em;
+            background-image: linear-gradient(to right,#f36819,#f7931d);
+            filter: drop-shadow(.03em .195em .075em rgba(25, 25, 25, .65));
+
+            &:hover{
+                background-image: linear-gradient(to right,#f36819,#f7931d);
+                opacity: 0.85;
+            }
+            &:active{
+                transform: translate(.03em,.07em); 
+                border: .07em solid rgba(10, 10, 10, 0.2);
+                box-shadow: inset .02em .02em .05em .05em rgb(25, 25, 25);
+            }
+        }
+        grid-area: btn;
+        
+    }
+
+    .stats{
+        margin: 50px 0;
+    }
+    
+    .stat1 :first-child,
+    .stat2 :first-child,
+    .stat3 :first-child{
+        @extend %stat-nums;
+    }
+
+    .stat1 :last-child,
+    .stat2 :last-child,
+    .stat3 :last-child{
+        @extend %stat-texts;
+    }
+
+    .stat1{
+        grid-area: stat1;
+    }
+
+    .stat2{
+        grid-area: stat2;
+    }
+
+    .stat3{
+        grid-area: stat3;
+    }
+}

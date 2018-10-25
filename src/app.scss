@@ -1,0 +1,30 @@
+.app{
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    grid-template-rows: repeat(3, minmax( 50px, auto));
+
+    Nav{
+        height: 60px;
+        padding: 0;
+        top: 0;
+        position: sticky;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, minmax( 500px, auto));
+        grid-gap: 1px;
+    }
+
+    .footer{
+        justify-self: flex-start;
+        padding: 5px 5px;
+        background: lightgray;
+        color: grey;
+        height: 30px;
+        width: 100%;
+    }
+}
+

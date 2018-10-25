@@ -1,0 +1,102 @@
+%header-title{
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.667em;
+}
+
+.content3{
+    font-family: Roboto;
+    display: grid;
+    margin: 25px 0;
+    overflow: hidden;
+    grid-template-rows: repeat(4, minmax( 45px, auto));
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "title title"
+        "info1 pic1"
+        "   .   .   "
+        "pic2 info2";
+
+    .title{
+        grid-area: title;
+        margin: 40px 0;
+        
+        .title-left{
+            @extend %header-title;
+            font-weight: bold;
+            color: #f36819;
+        }
+
+        .title-right{
+            @extend %header-title;
+            color: #283647;
+        }
+    }
+
+    .info1, .info2{
+        width: 500px;
+        margin: auto;
+        text-align: left;
+
+        header2{
+            display: block;
+            font-family: Roboto;
+            font-size: 28px;
+            margin: 0 auto;
+            color: #f36819; 
+        }
+        
+        header3{
+            display: block;
+            padding-left: 10px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #f7931d;
+            letter-spacing: 2px;
+        }
+        
+        p{
+            margin: 40px auto;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    
+    
+
+    .info1{
+        grid-area: info1;
+    }
+    
+    .info2{
+        grid-area: info2;
+    }
+    
+    .pic1{
+        height: 350px;
+        min-width: 600px;
+        max-width: 705px;
+        margin-left: 15px;
+        grid-area: pic1;
+
+        img{
+            min-height: 100%;
+            width: 100%;
+        }
+        
+    }
+    
+    .pic2{
+        height: 350px;
+        min-width: 600px;
+        max-width: 705px;
+        margin-right: 15px;
+        grid-area: pic2;
+
+        img{
+            min-height: 100%;
+            width: 100%;
+        }
+        
+    }
+}
