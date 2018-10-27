@@ -75,7 +75,7 @@ class ImageSlides extends Component {
 
                 <div className="slide">
                     <Slider  {...settings}>
-                        <div> <img  style={{height: "100%"}} src={data[0].image} alt={data[0].name} /> </div>
+                        <div> <img  style={{height: "100%", width: "100%"}} src={data[0].image} alt={data[0].name} /> </div>
                         <div> <img style={{width: "100%"}} src={data[1].image} alt={data[1].name} /> </div>
                         <div> <img style={{width: "100%"}} src={data[2].image} alt={data[2].name} /> </div>
                     </Slider>

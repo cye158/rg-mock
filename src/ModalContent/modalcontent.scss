@@ -1,11 +1,25 @@
+%input-style{
+    height:20px;
+    padding: 7px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(60, 60, 60, 0.6);
+    border-radius: .5em;
+}
+
+%input-section{
+    p{
+        margin: 5px 1px;
+    }
+    font-size: 15px;
+    color: #9c6321;
+    letter-spacing: 1px;
+}
+
 .modal{
-    position: sticky;
-    position: -webkit-sticky;
-    z-index: 10;
-    background: rgba(75, 75, 75, 0.5);
-    display: grid;
     justify-items: center;
-    padding: 10px;
+    display: grid;
+    width: 100%;
     grid-template-rows: repeat(5, minmax(30px, auto));
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -14,28 +28,80 @@
         "email phone"
         "msg msg"
         "btn btn";
-
+    
+    &:nth-child(n){
+        margin: 5px;
+    }
     .title{
+        font-size: 28px;
+        color: #f36819; 
         grid-area: title;
     }
 
     .name{
+        @extend %input-section;
         grid-area: name;
+        width: 100%;
+        input{
+            @extend %input-style;
+            width: 95%;
+        }
     }
 
     .email{
+        @extend %input-section;
         grid-area: email;
+        width: 100%;
+        input{
+            @extend %input-style;
+        }
     }
 
     .phone{
+        @extend %input-section;
         grid-area: phone;
+        width: 100%;
+        input{
+            @extend %input-style;
+        }
     }
 
     .message{
+        @extend %input-section;
         grid-area: msg;
+        width: 100%;
+        height: 150px;
+
+        textarea{
+            height: 50%;
+            width: 95%;
+            @extend %input-style;
+        }
     }
 
-    .button{
+    .btn{
         grid-area: btn;
+
+        button{
+            color: whitesmoke;
+            font-size: 1.333em;
+            height: 40px;
+            width: 215px;
+            letter-spacing: 0.167em;
+            border: 0;
+            border-radius: 0.417em;
+            background-image: linear-gradient(to right,#f36819,#f7931d);
+            filter: drop-shadow(.01em .095em .075em rgba(25, 25, 25, .65));
+
+            &:hover{
+                background-image: linear-gradient(to right,#f36819,#f7931d);
+                opacity: 0.85;
+            }
+            &:active{
+                transform: translate(.03em,.07em); 
+                border: .07em solid rgba(10, 10, 10, 0.2);
+                box-shadow: inset .02em .02em .05em .05em rgb(25, 25, 25);
+            }
+        }
     }
 }
