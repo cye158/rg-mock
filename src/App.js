@@ -5,6 +5,8 @@ import ContentTwo from './Content2/Content2';
 import ContentThree from './Content3/Content3';
 import './app.scss';
 
+import ContentTransition from 'react-transition-group/CSSTransition';
+
 
 class App extends Component {
     
@@ -12,17 +14,24 @@ class App extends Component {
     render(){
         return(
             <div className="app">
-				<Nav />
-                <div className="container">
-                    <ContentOne />
-                    <ContentTwo />
-                    <ContentThree />
-                </div> 
-                
+				
+                <Nav />
+
+                <ContentTransition
+                    in={true}
+                    appear={true}
+                    timeout={1000}
+                    classNames="fade"
+                    >
+
+                    <div className="container">
+                        <ContentOne />
+                        <ContentTwo />
+                        <ContentThree />
+                    </div> 
+                </ContentTransition>
                 <div className="footer">
-                <span>
-                    Curabitur ullamcorper ultricies nisi © 2109 Nam eget dui. Etiam rhoncus.	
-                </span>
+                    <span>Curabitur ullamcorper ultricies nisi © 2109 Nam eget dui. Etiam rhoncus.</span>
                 </div>
             </div>
         );

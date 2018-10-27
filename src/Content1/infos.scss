@@ -55,6 +55,8 @@ $font-stack: "Roboto", sans-serif;
     .info5{
         grid-area: info5;
         height: 250px;
+        margin: 10px 0;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;

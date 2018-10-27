@@ -1,0 +1,41 @@
+.modal{
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 10;
+    background: rgba(75, 75, 75, 0.5);
+    display: grid;
+    justify-items: center;
+    padding: 10px;
+    grid-template-rows: repeat(5, minmax(30px, auto));
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "name name"
+        "email phone"
+        "msg msg"
+        "btn btn";
+
+    .title{
+        grid-area: title;
+    }
+
+    .name{
+        grid-area: name;
+    }
+
+    .email{
+        grid-area: email;
+    }
+
+    .phone{
+        grid-area: phone;
+    }
+
+    .message{
+        grid-area: msg;
+    }
+
+    .button{
+        grid-area: btn;
+    }
+}

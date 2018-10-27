@@ -1,14 +1,14 @@
 .navbar { 
-    height: 60px;
     color: whitesmoke;
-    display: grid;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     box-shadow: 0 .65em 1.25em rgba(25, 25, 25, 0.33);
-    z-index: 2;
+    z-index: 5;
 
     nav {
         display: flex;
+        height: 60px;
         background: #1676DD;
         align-items: center;
         justify-content: center;
@@ -16,5 +16,26 @@
 
     img {
         height: 40px;
+    }
+}
+
+
+/* CSSTransition effects */
+.dropin-appear-{
+    opacity: 0;
+}
+
+.dropin-appear-active{
+    animation: drop .5s ease-out;
+}
+
+@keyframes drop{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1; 
     }
 }

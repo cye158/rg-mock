@@ -5,6 +5,7 @@
 };
 
 %stat-nums{
+    color: rgba(55, 55, 55, 0.9);
     font-weight: bold;
     font-size: 55px;
     letter-spacing: 2px;
@@ -93,14 +94,17 @@
         
     }
 
-    .stats{
+
+    .stats {
         margin: 50px 0;
     }
     
     .stat1 :first-child,
     .stat2 :first-child,
     .stat3 :first-child{
+        
         @extend %stat-nums;
+        filter: drop-shadow(.075em .075em .033em rgba(25, 25, 25, .5));
     }
 
     .stat1 :last-child,

@@ -1,0 +1,91 @@
+.img-carousel{ 
+    height: 509px;
+    display: grid;
+    grid-template-rows: repeat(1, minmax( 50px, auto));
+    grid-template-areas: 
+        "slide";
+
+    .slide{
+        position: relative;
+        overflow: hidden;
+        grid-area: slide;
+
+        &:before {
+            content: '';
+            height: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to right,#f36819,#000000);
+            opacity: .3;
+            z-index: 1;
+        }
+        
+    }
+
+    .slide-overlay-info{
+        min-width: 500px;
+        text-align: left;
+        position: absolute;
+        top: 375px;
+        left: 200px;
+        z-index: 2;
+
+        header{
+            color: white;
+            margin: 0;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        
+        .btn{
+            align-self: center;
+            margin: 10px auto;
+            justify-self: flex-start;
+            grid-area: btn;
+            
+            button{
+                color: whitesmoke;
+                font-size: 1.333em;
+                height: 40px;
+                width: 215px;
+                letter-spacing: 0.167em;
+                border: 0;
+                border-radius: 0.417em;
+                background-image: linear-gradient(to right,#f36819,#f7931d);
+                filter: drop-shadow(-.1em .2em .075em rgba(25, 25, 25, .65));
+    
+                &:hover{
+                    background-image: linear-gradient(to right,#c1591e,#bb6f19);
+                }
+                &:active{
+                    transform: translate(-.02em,.067em); 
+                    border: .01em solid rgba(10, 10, 10, 0.05);
+                    box-shadow: inset .02em .02em .05em rgba(25, 25, 25, .6);
+                }
+            }
+        }
+    }
+}
+
+/* CSSTransition effects */
+.fade-enter{
+    opacity: 0;
+}
+
+.fade-enter-active{
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    transition-delay: 0.2s;
+}
+
+.fade-exit{
+    opacity: 1;
+}
+
+.fade-exit-active{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    transition-delay: 0.2s;
+}
