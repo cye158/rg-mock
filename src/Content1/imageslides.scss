@@ -47,22 +47,22 @@
             
             button{
                 color: whitesmoke;
-                font-size: 1.333em;
+                font-size: 15px;
                 height: 40px;
                 width: 215px;
-                letter-spacing: 0.167em;
+                letter-spacing: 2px;
                 border: 0;
-                border-radius: 0.417em;
+                border-radius: 5px;
                 background-image: linear-gradient(to right,#f36819,#f7931d);
-                filter: drop-shadow(-.1em .2em .075em rgba(25, 25, 25, .65));
+                filter: drop-shadow(-1px 1px 1px rgba(25, 25, 25, .65));
     
                 &:hover{
                     background-image: linear-gradient(to right,#c1591e,#bb6f19);
                 }
                 &:active{
                     transform: translate(-.02em,.067em); 
-                    border: .01em solid rgba(10, 10, 10, 0.05);
-                    box-shadow: inset .02em .02em .05em rgba(25, 25, 25, .6);
+                    border: 1px solid rgba(10, 10, 10, 0.05);
+                    box-shadow: inset 1px 1px 1px rgba(25, 25, 25, .65);
                 }
             }
         }

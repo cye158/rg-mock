@@ -1,6 +1,6 @@
 %info-fonts{
-    font-size: 1.167em;
-    line-height: 1.667em;
+    font-size: 14px;
+    line-height: 20px;
     text-align: left;
 };
 
@@ -21,8 +21,8 @@
 
 %header-title{
     text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.667em;
+    font-size: 24px;
+    line-height: 20px;
 }
 
 .content2{
@@ -70,15 +70,15 @@
         
         button{
             color: whitesmoke;
-            font-size: 1.333em;
+            font-size: 15px;
             height: 40px;
             width: 215px;
             margin: 50px;
-            letter-spacing: 0.167em;
+            letter-spacing: 2px;
             border: 0;
-            border-radius: 0.417em;
+            border-radius: 5px;
             background-image: linear-gradient(to right,#f36819,#f7931d);
-            filter: drop-shadow(.03em .195em .075em rgba(25, 25, 25, .65));
+            filter: drop-shadow(1px 1px 1px rgba(25, 25, 25, .65));
 
             &:hover{
                 background-image: linear-gradient(to right,#f36819,#f7931d);
@@ -86,8 +86,8 @@
             }
             &:active{
                 transform: translate(.03em,.07em); 
-                border: .07em solid rgba(10, 10, 10, 0.2);
-                box-shadow: inset .02em .02em .05em .05em rgb(25, 25, 25);
+                border: 1px solid rgba(10, 10, 10, 0.2);
+                box-shadow: inset 1px 1px 1px rgba(25, 25, 25, .65);
             }
         }
     }
