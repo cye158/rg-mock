@@ -1,6 +1,6 @@
 
 
-# RG  Mockup
+# WB  Mockup
 
 ## Description
 
@@ -15,13 +15,13 @@ This project was bootstrapped with [CRA](https://github.com/facebook/create-reac
 1) Download or Clone the repo using terminal
 
 ```bash
-$ git clone https://github.com/cye158/rg-mock.git
+$ git clone https://github.com/cye158/wb-mock.git
 ```
 
-2) `cd` into project folder `rg-mock`
+2) `cd` into project folder `wb-mock`
 
 ```bash
-$ cd rg-mock
+$ cd wb-mock
 ```
 
 3) Install the dependencies needed
